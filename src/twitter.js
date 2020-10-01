@@ -1,4 +1,5 @@
 const Twit = require('twit');
+const chalk = require('chalk');
 
 const {
     TWEAM_CONSUMER_KEY = '',
@@ -43,10 +44,9 @@ module.exports = function startStream(cli) {
             );
         } else {
             console.log(created_at);
-            console.log(`${name} // @${screen_name}`);
-            console.log('\n');
+            console.log(chalk.inverse(`${name} // @${screen_name}`));
             console.log(text);
-            console.log('\n\n\n');
+            console.log('\n\n');
         }
     });
 };
