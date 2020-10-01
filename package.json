@@ -1,6 +1,6 @@
 {
     "name": "tweam",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Filter tweets in real-time @ your cli with tweam",
     "main": "index.js",
     "scripts": {
