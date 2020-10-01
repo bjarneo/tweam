@@ -21,6 +21,7 @@
     "license": "MIT",
     "dependencies": {
         "chalk": "^4.1.0",
+        "date-fns": "^2.16.1",
         "meow": "^7.1.1",
         "twit": "^2.2.11"
     },
