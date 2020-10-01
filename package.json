@@ -1,0 +1,28 @@
+{
+  "name": "tweam",
+  "version": "1.0.1",
+  "description": "Get tweets in real-time by using your own keyword filters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter",
+    "stream",
+    "filter",
+    "cli",
+    "keyword",
+    "tags",
+    "hash",
+    "hashtags"
+  ],
+  "author": "Bjarne Oeverli",
+  "license": "MIT",
+  "dependencies": {
+    "meow": "^7.1.1",
+    "twit": "^2.2.11"
+  },
+  "bin": {
+    "tweam": "./bin.js"
+  }
+}
