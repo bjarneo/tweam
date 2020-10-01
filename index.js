@@ -7,7 +7,9 @@ const cli = meow(
       $ tweam <input>
  
     Options
-      --lang, -l  Set language. Default: 'en'
+      --lang, -l        Set language.                   Default: 'en'
+      --retweets, -r    Should display retweets.        Default: false
+      --json, -j        Should display tweets as json.  Default: false
  
     Examples
       $ tweam nodejs javascript
@@ -22,6 +24,11 @@ const cli = meow(
             retweets: {
                 type: 'boolean',
                 alias: 'r',
+                default: false
+            },
+            json: {
+                type: 'boolean',
+                alias: 'j',
                 default: false
             }
         }

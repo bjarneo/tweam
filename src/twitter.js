@@ -32,10 +32,21 @@ module.exports = function startStream(cli) {
             return;
         }
 
-        console.log(created_at);
-        console.log(`${name} // @${screen_name}`);
-        console.log('\n');
-        console.log(text);
-        console.log('\n\n\n');
+        if (cli.flags.json) {
+            console.log(
+                JSON.stringify({
+                    created_at,
+                    name,
+                    screen_name,
+                    text
+                })
+            );
+        } else {
+            console.log(created_at);
+            console.log(`${name} // @${screen_name}`);
+            console.log('\n');
+            console.log(text);
+            console.log('\n\n\n');
+        }
     });
 };
