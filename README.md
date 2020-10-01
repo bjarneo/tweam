@@ -1,13 +1,13 @@
-# Twitter realtime status filter cli
+# Twitter real-time status filter cli
 
-Get tweets in real-time by using your own keyword filters.
+Filter tweets in real-time @ your cli with tweam
 
 ## Install
 
 ```bash
 $ npm i -g tweam
 # Or
-$ npx tweam keyword
+$ npx tweam hacktoberfest
 ```
 
 ## Usage
