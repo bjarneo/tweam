@@ -1,5 +1,6 @@
 const Twit = require('twit');
 const chalk = require('chalk');
+const { format } = require('date-fns');
 
 const {
     TWEAM_CONSUMER_KEY = '',
@@ -43,7 +44,7 @@ module.exports = function startStream(cli) {
                 })
             );
         } else {
-            console.log(created_at);
+            console.log(format(new Date(created_at), 'eee Mo MMMM HH:mm:ss'));
             console.log(chalk.inverse(`${name} // @${screen_name}`));
             console.log(text);
             console.log('\n\n');
