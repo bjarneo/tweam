@@ -12,11 +12,11 @@ const T = new Twit({
     consumer_key: TWEAM_CONSUMER_KEY,
     consumer_secret: TWEAM_CONSUMER_SECRET,
     access_token: TWEAM_ACCESS_TOKEN,
-    access_token_secret: TWEAM_ACCESS_TOKEN_SECRET,
+    access_token_secret: TWEAM_ACCESS_TOKEN_SECRET
 });
 
-
-const cli = meow(`
+const cli = meow(
+    `
     Usage
       $ tweam <input>
  
@@ -25,35 +25,34 @@ const cli = meow(`
  
     Examples
       $ tweam nodejs javascript
-`, {
-    flags: {
-        lang: {
-            type: 'string',
-            alias: 'l',
-            default: 'en'
-        },
-        retweets: {
-            type:  'boolean',
-            alias: 'r',
-            default: false
+`,
+    {
+        flags: {
+            lang: {
+                type: 'string',
+                alias: 'l',
+                default: 'en'
+            },
+            retweets: {
+                type: 'boolean',
+                alias: 'r',
+                default: false
+            }
         }
     }
-});
+);
 
 const stream = T.stream('statuses/filter', {
     track: cli.input,
-    language: cli.flags.lang,
+    language: cli.flags.lang
 });
-  
+
 stream.on('tweet', async function onTweet(tweet) {
     const {
         created_at,
         retweeted,
         text,
-        user: {
-            name,
-            screen_name,
-        }
+        user: { name, screen_name }
     } = tweet;
 
     if (retweeted && !cli.flags.retweets) {
@@ -65,4 +64,4 @@ stream.on('tweet', async function onTweet(tweet) {
     console.log('\n');
     console.log(text);
     console.log('\n\n\n');
-});  
+});
