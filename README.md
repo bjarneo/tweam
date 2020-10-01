@@ -2,7 +2,14 @@
 
 Get tweets in real-time by using your own keyword filters.
 
-Usage:
+## Install
+```bash
+$ npm i -g tweam
+# Or
+$ npx tweam keyword
+```
+
+## Usage
 ```bash
     Usage
       $ tweam <input>
