@@ -1,6 +1,6 @@
 {
     "name": "tweam",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Get tweets in real-time by using your own keyword filters.",
     "main": "index.js",
     "scripts": {

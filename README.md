@@ -17,9 +17,11 @@ $ npx tweam keyword
       $ tweam <input>
 
     Options
-      --lang, -l  Set language. Default: 'en'
+      --lang, -l        Set language.                   Default: 'en'
+      --retweets, -r    Should display retweets.        Default: false
+      --json, -j        Should display tweets as json.  Default: false
 
-    Example
+    Examples
       $ tweam nodejs javascript
 ```
 
