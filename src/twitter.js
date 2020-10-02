@@ -47,7 +47,7 @@ module.exports = function startStream(cli) {
             console.log(format(new Date(created_at), 'eee Mo MMMM HH:mm:ss'));
             console.log(chalk.inverse(`${name} // @${screen_name}`));
             console.log(text);
-            console.log('\n\n');
+            console.log('\n' + '-'.repeat(50) + '\n');
         }
     });
 };
