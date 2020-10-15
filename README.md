@@ -17,9 +17,10 @@ $ npx tweam hacktoberfest
       $ tweam <input>
 
     Options
-      --lang, -l        Set language.                   Default: 'en'
-      --retweets, -r    Should display retweets.        Default: false
-      --json, -j        Should display tweets as json.  Default: false
+      --lang, -l            Set language.                   Default: 'en'
+      --retweets, -r        Should display retweets.        Default: false
+      --json, -j            Should display tweets as json.  Default: false
+      --json-full, -jf      Full tweet json.                Default: false
 
     Examples
       $ tweam nodejs javascript

@@ -43,6 +43,8 @@ module.exports = function startStream(cli) {
                     text
                 })
             );
+        } else if (cli.flags.jsonFull) {
+            console.log(JSON.stringify(tweet));
         } else {
             console.log(format(new Date(created_at), 'eee do MMMM HH:mm:ss'));
             console.log(chalk.inverse(`${name} // @${screen_name}`));
